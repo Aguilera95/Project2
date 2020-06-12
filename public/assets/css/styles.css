@@ -3968,6 +3968,7 @@ input[type=button].btn-block {
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
+  
 }
 
 .nav-link {
@@ -10257,6 +10258,10 @@ body {
   .masthead h2 {
     max-width: 30rem;
     font-size: 1.25rem;
+    background: linear-gradient(rgba(19, 18, 18, 0.9), rgba(255, 255, 255, 0));
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
   }
 }
 
