@@ -10156,6 +10156,11 @@ body {
   outline: none;
   background-color: transparent;
 }
+.nav-item{
+  color: #495057;
+  text-decoration: underline;
+  }
+
 @media (min-width: 992px) {
   #mainNav {
     padding-top: 0;
