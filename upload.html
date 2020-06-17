@@ -7,7 +7,7 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>Project2 Photogie</title>
-    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="./public/assets/web-img/favicon.png" />
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
     <!-- Google fonts-->
@@ -21,18 +21,17 @@
 
 <body id="page-top">
     <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <!-- <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav"> -->
+    <nav class="navbar navbar-expand-lg navbar-light upload-top" id="mainNav">
         <div class="container">
             <a class="navbar-brand js-scroll-trigger" href="#page-top"></a><button
                 class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
                 data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
                 aria-label="Toggle navigation">Menu<i class="fas fa-bars"></i></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
+                <a href="./index.html"><img src="./public/assets/web-img/Photogie-Logo-Full7.png"></a>
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#signup">Sign Up</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="./index.html"><img src="./public/assets/web-img/home-Full7.png"></a></li>
                 </ul>
             </div>
         </div>
@@ -40,31 +39,42 @@
     <!-- Masthead-->
     <header class="masthead">
         <div class="container d-flex h-100 align-items-center">
-            <form method="post" enctype="multipart/form-data" action="/upload">
-            <div class="row">
-                <div class="col-md-2"></div>
-                <div class="col-md-4">
-                <h2 class="text-white-50 mx-auto mt-2 mb-5"><input type="text" name="photographer_name">Photographer's name</h2>
+            <div class="row form form-row">
+                <div class="col-lg-12">
+                <form method="post" enctype="multipart/form-data" action="/upload">
+                    <div class="row form-row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-4">
+                            <h7 class="text-dark mx-auto mt-2 mb-5 form"><input type="text"
+                                    name="photographer_name" style="min-width: 100%; align-items: center; "><br>Photographer's name<br><br></h7>
+                        </div>
+                        <div class="col-md-4">
+                            <h7 class="text-dark mx-auto mt-2 mb-5 form" id="photo-name"><input type="text" name="photo_name" style="min-width: 100%; align-items: center;"><br>Photo Name<br><br>
+                            </h7>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
+                    <div class="row form-row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-4">
+                            <h7 class="text-dark mx-auto mt-2 mb-5 img_description form"><textarea name="photo_description" rows=3 wrap="soft" style="min-width: 100%; align-items: center;"></textarea><br>Photo Description</h7>
+                        </div>
+                        <div class="col-md-4">
+                            <h7 class="text-dark mx-auto mt-2 mb-5 form"><input type="file" name="file"></h7>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
+                    <div class="row submit-row">
+                        <div class="submit-column col-md-12">
+                            <input type="submit" value="Submit">
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-4">
-                <h2 class="text-white-50 mx-auto mt-2 mb-5"><input type="text" name="photo_name">Photo Name</h2>
-                </div>
-                <div class="col-md-2"></div>
-            </div>
-            <div class="row">
-                <div class="col-md-2"></div>
-                <div class="col-md-4">
-                    <h2 class="text-white-50 mx-auto mt-2 mb-5"><input type="text" name="photo_description">Photo Description</h2>
-                </div>
-                <div class="col-md-4">
-                    <h2 class="text-white-50 mx-auto mt-2 mb-5"><input type="file" name="file"></h2>
-                    <input type="submit" value="Submit">
-                </div>
-                <div class="col-md-2"></div>
             </div>
             </form>
         </div>
     </header>
 
 </body>
+
 </html>
