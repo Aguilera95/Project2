@@ -4315,7 +4315,7 @@ input[type="button"].btn-block {
 }
 
 .nav-tabs {
-  border-bottom: 1px solid #dee2e6;
+  border-bottom: 1px solid black;
 }
 .nav-tabs .nav-item {
   margin-bottom: -1px;
@@ -4351,8 +4351,8 @@ input[type="button"].btn-block {
 }
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #64a19d;
+  color:black;
+  background-color: #030505;
 }
 
 .nav-fill .nav-item {
@@ -10676,7 +10676,7 @@ body {
   line-height: 2.5rem;
   letter-spacing: 0.8rem;
   background: linear-gradient(rgba(19, 18, 18, 0.9), rgba(255, 255, 255, 0));
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: black;
   -webkit-background-clip: text;
   background-clip: text;
 }
@@ -10703,10 +10703,10 @@ body {
   .masthead h2 {
     max-width: 30rem;
     font-size: 1.25rem;
-    background: linear-gradient(rgba(19, 18, 18, 0.9), rgba(255, 255, 255, 0));
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
+    background: linear-gradient(rgba(2, 2, 2, 0.9), rgba(255, 255, 255, 0));
+  -webkit-text-fill-color: black;
+  -webkit-background-clip: text;
+          background-clip: text;
   }
 }
 
