@@ -2,8 +2,8 @@
   "development": {
     "username": "root",
     "password": null,
-    "database": "passport_demo",
-    "host": "127.0.0.1",
+    "database": "photogie_db",
+    "host": "localhost",
     "dialect": "mysql"
   },
   "test": {
