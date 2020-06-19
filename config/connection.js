@@ -2,9 +2,9 @@ var mysql = require("mysql");
 
 var connection = mysql.createConnection({
   host: "localhost",
-  port: 3000
+  port: 8080,
   user: "root",
-  password: "",
+  password: "secretpassword",
   database: "photogie_db"
 });
 
