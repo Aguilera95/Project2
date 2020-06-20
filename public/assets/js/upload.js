@@ -38,5 +38,18 @@ function loadImageFileAsURL()
 }
 
 // function that does a $.post('/api/uploads') pass object {user: 'name', image: '', name of image: ''} into $.post
-
+var newUpload ={
+    photographerName: $("")
+	photoName: $("#photo-name").val().trim(),
+    photoDescription: $("")
+    photoPath: 
+}
+$.ajax("/api/uploads"),{
+    type: "POST",
+    data: newUpload
+}).then(
+    function( {
+        console.log("New Uploads")
+    })
+)
 main();
