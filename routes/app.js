@@ -7,7 +7,7 @@ const storage = multer.diskStorage({
   filename: function (req, file, cb) {
     cb(
       null,
-      file.fieldname + "-" + Date.now() + path.extname(file.originalname)
+      file.fieldName + "-" + Date.now() + path.extname(file.originalName)
     );
   },
 });
@@ -27,11 +27,11 @@ function checkFileType(file, cb) {
   // Allowed ext
   const filetypes = /jpeg|jpg|png|/;
   // Check ext
-  const extname = filetypes.test(path.extname(file.originalname).toLowerCase());
+  const extname = filetypes.test(path.extname(file.originalName).toLowerCase());
   // Check mime
-  const mimetype = filetypes.test(file.mimetype);
+  const mimeType = filetypes.test(file.mimeType);
 
-  if (mimetype && extname) {
+  if (mimeType && extname) {
     return cb(null, true);
   } else {
     cb("Error: Images Only!");
@@ -46,16 +46,16 @@ module.exports = function (app) {
   app.post("/api/upload", (req, res) => {
     upload(req, res, (err) => {
       if (err) {
-        res.render("index", {
+        res.sendFile("index", {
           msg: err,
         });
       } else {
         if (req.file == undefined) {
-          res.render("index", {
+          res.sendFile("index", {
             msg: "Error: No File Selected!",
           });
         } else {
-          res.render("index", {
+          res.sendFile("index", {
             msg: "File Uploaded!",
             file: `uploads/${req.file.filename}`,
           });
@@ -64,3 +64,5 @@ module.exports = function (app) {
     });
   });
 };
+
+

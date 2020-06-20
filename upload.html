@@ -43,7 +43,7 @@
         <div class="container d-flex h-100 align-items-center">
             <div class="row form form-row">
                 <div class="col-lg-12">
-                <form enctype="multipart/form-data" >
+                <form method="post" action="" enctype="multipart/form-data" >
                     <div class="row form-row">
                         <div class="col-md-2"></div>
                         <div class="col-md-4">
@@ -76,16 +76,14 @@
             </form>
         </div>
 
-
-        
+    
     </header>
-
     <script type= "text/javascript">
         $(document).ready(function(){
 
             console.log("hiii");
          
-            $('#but_upload').click(function(event){
+            $('#but_upload').onclick(function(event){
                 event.preventDefault();
 
                 console.log("hi");
@@ -114,13 +112,7 @@
                         }
 
 
-                        },
-                        fail: function(response){
-                            console.log(response);
-
                         }
-                      
-                        
 
                 });
 
@@ -131,8 +123,6 @@
         
         
         </script>
-    
-    <!-- <script src="./assets/js/upload.js"></script> -->
 </body>
 
 </html>
