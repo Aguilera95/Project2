@@ -1,14 +1,14 @@
 {
   "development": {
     "username": "root",
-    "password": "Aguilera95!",
+    "password": "Password",
     "database": "photogie_db",
     "host": "localhost",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": "",
+    "password": "Password",
     "database": "database_test",
     "host": "127.0.0.1",
     "dialect": "mysql"
