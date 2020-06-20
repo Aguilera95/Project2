@@ -31,7 +31,8 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <a href="index.html"><img src="/assets/web-img/Photogie-Logo-Full7.png"></a>
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.html"><img src="/assets/web-img/home-Full7.png"></a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.html"><img
+                                src="/assets/web-img/home-Full7.png"></a></li>
                 </ul>
             </div>
         </div>
@@ -41,95 +42,107 @@
         <div class="container d-flex h-100 align-items-center">
             <div class="row form form-row">
                 <div class="col-lg-12">
-                <form enctype="multipart/form-data" >
-                    <div class="row form-row">
-                        <div class="col-md-2"></div>
-                        <div class="col-md-4">
-                            <h7 class="text-dark mx-auto mt-2 mb-5 form"><input type="text"
-                                    name="photographer_name" style="min-width: 100%; align-items: center; "><br>Photographer's name<br><br></h7>
+                    <form enctype="multipart/form-data">
+                        <div class="row form-row">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-4">
+                                <h7 class="text-dark mx-auto mt-2 mb-5 form"><input type="text" name="photographer_name"
+                                        style="min-width: 100%; align-items: center; "><br>Photographer's name<br><br>
+                                </h7>
+                            </div>
+                            <div class="col-md-4">
+                                <h7 class="text-dark mx-auto mt-2 mb-5 form" id="photo-name"><input type="text"
+                                        name="photo_name" style="min-width: 100%; align-items: center;"><br>Photo
+                                    Name<br><br>
+                                </h7>
+                            </div>
+                            <div class="col-md-2"></div>
                         </div>
-                        <div class="col-md-4">
-                            <h7 class="text-dark mx-auto mt-2 mb-5 form" id="photo-name"><input type="text" name="photo_name" style="min-width: 100%; align-items: center;"><br>Photo Name<br><br>
-                            </h7>
+                        <div class="row form-row">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-4">
+                                <h7 class="text-dark mx-auto mt-2 mb-5 img_description form"><textarea
+                                        name="photo_description" rows=3 wrap="soft"
+                                        style="min-width: 100%; align-items: center;"></textarea><br>Photo Description
+                                </h7>
+                            </div>
+                            <div class="col-md-4">
+                                <!-- <h7 class="text-dark mx-auto mt-2 mb-5 form"><input type="file" name="file"></h7> -->
+
+                                <h7 class="text-dark mx-auto mt-2 mb-5 form"><input type="file" name="filePhoto" value="" id="filePhoto" class="required borrowerImageFile" data-errormsg="PhotoUploadErrorMsg"><img id="previewHolder" alt="Preview" width="250px" height="250px"/></h7>
+                            </div>
+                            <div class="col-md-2"></div>
                         </div>
-                        <div class="col-md-2"></div>
-                    </div>
-                    <div class="row form-row">
-                        <div class="col-md-2"></div>
-                        <div class="col-md-4">
-                            <h7 class="text-dark mx-auto mt-2 mb-5 img_description form"><textarea name="photo_description" rows=3 wrap="soft" style="min-width: 100%; align-items: center;"></textarea><br>Photo Description</h7>
+                        <div class="row submit-row">
+                            <div class="submit-column col-md-12">
+                                <input type="submit" value="Submit">
+                            </div>
                         </div>
-                        <div class="col-md-4">
-                            <h7 class="text-dark mx-auto mt-2 mb-5 form"><input type="file" name="file"></h7>
-                        </div>
-                        <div class="col-md-2"></div>
-                    </div>
-                    <div class="row submit-row">
-                        <div class="submit-column col-md-12">
-                            <input type="submit" value="Submit">
-                        </div>
-                    </div>
                 </div>
             </div>
             </form>
         </div>
 
 
-        
+
     </header>
 
-    <script type= "text/javascript">
-        $(document).ready(function(){
+    <script type="text/javascript">
+        // $(document).ready(function () {
 
-            console.log("hiii");
-         
-            $('#but_upload').click(function(event){
-                event.preventDefault();
+        //     console.log("hiii");
 
-                console.log("hi");
+        //     $('#but_upload').click(function (event) {
+        //         event.preventDefault();
 
-                var fd = new FormData();
-                var files = $('#file')[0].files[0];
-                fd.append('file',files);
+        //         console.log("hi");
 
-                $.ajax({
+        //         var fd = new FormData();
+        //         var files = $('#file')[0].files[0];
+        //         fd.append('file', files);
 
-                    url: 'upload.php',
-                    type: 'post',
-                    data: 'fd',
-                    contentType: false,
-                    processData: false,
-                    success: function(response){
+        //         $.ajax({
 
-                        if(response != 0){
-                            $('#img').attr('src', response);
-                            $('preview img').show();
-                        }
-                        else{
-                            alert('file not uploaded');
+        //             url: 'upload.php',
+        //             type: 'post',
+        //             data: 'fd',
+        //             contentType: false,
+        //             processData: false,
+        //             success: function (response) {
+
+        //                 if (response != 0) {
+        //                     $('#img').attr('src', response);
+        //                     $('preview img').show();
+        //                 }
+        //                 else {
+        //                     alert('file not uploaded');
+        //                 }
+        //             },
+        //             fail: function (response) {
+        //                 console.log(response);
+        //             }
+        //         });
+        //     });
+        // });
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    $('#previewHolder').attr('src', e.target.result);
+                }
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        $("#filePhoto").change(function () {
+            readURL(this);
+        });
 
 
-                        }
 
+    </script>
 
-                        },
-                        fail: function(response){
-                            console.log(response);
-
-                        }
-                      
-                        
-
-                });
-
-
-                });
-            });            
-
-        
-        
-        </script>
-    
     <!-- <script src="./assets/js/upload.js"></script> -->
 </body>
 

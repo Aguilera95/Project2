@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "Aguilera95!",
+    "password": "Password",
     "database": "photogie_db",
     "host": "localhost",
     "dialect": "mysql"
